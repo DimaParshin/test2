@@ -74,7 +74,7 @@
 		skeleton.scaleX = scale;
 		skeleton.scaleY = -scale;
 
-		skeleton = skeleton * 33;
+		skeleton.scale = skeleton.scale * 33;
 		// Update and apply the animation state, update the skeleton's
 		// world transforms and render the skeleton.
 		animationState.update(delta);
