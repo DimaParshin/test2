@@ -27,15 +27,15 @@
 		console.log("renderer: ", skeletonRenderer.useTriangleRendering);
 		// Load the assets.
 		assetManager = new spine.AssetManager("assets/");
-		assetManager.loadText("spineboy-ess.json");
-		assetManager.loadTextureAtlas("spineboy.atlas");
+		assetManager.loadText("Crot.json");
+        assetManager.loadTextureAtlas("Crot.atlas");
 		await assetManager.loadAll();
 
 		// Create the texture atlas and skeleton data.
-		let atlas = assetManager.require("spineboy.atlas");
+        let atlas = assetManager.require("Crot.atlas");
 		let atlasLoader = new spine.AtlasAttachmentLoader(atlas);
 		let skeletonJson = new spine.SkeletonJson(atlasLoader);
-        let skeletonData = skeletonJson.readSkeletonData(assetManager.require("spineboy-ess.json"));
+        let skeletonData = skeletonJson.readSkeletonData(assetManager.require("Crot.json"));
 
 		// Instantiate a new skeleton based on the atlas and skeleton data.
 		skeleton = new spine.Skeleton(skeletonData);
