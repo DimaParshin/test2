@@ -67,15 +67,15 @@
 		}
 		context.clearRect(0, 0, canvas.width, canvas.height);
 
-		/* Center the skeleton and resize it so it fits inside the canvas.
+		 Center the skeleton and resize it so it fits inside the canvas.
 		skeleton.x = canvas.width / 2;
 		skeleton.y = canvas.height - canvas.height * 0.1;
 		let scale = (canvas.height / bounds.height * 0.8);
 		skeleton.scaleX = scale;
 		skeleton.scaleY = -scale;
 
-		skeleton.scale = skeleton.scale * 33;
-		*/ //Update and apply the animation state, update the skeleton's
+		skeleton.scale = skeleton.scale;
+		//Update and apply the animation state, update the skeleton's
 		// world transforms and render the skeleton.
 		animationState.update(delta);
 		animationState.apply(skeleton);
