@@ -4,6 +4,8 @@ size: 4096,655
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
+scale:0.5
+
 Bed_1
   rotate: false
   xy: 2, 150
