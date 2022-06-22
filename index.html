@@ -21,7 +21,9 @@
 		context = canvas.getContext("2d");
 		skeletonRenderer = new spine.SkeletonRenderer(context);
         spine.SkeletonRenderer.useTriangleRendering = true;
-        skeletonRenderer.useTriangleRendering = true;
+		skeletonRenderer.useTriangleRendering = true;
+        console.log(spine.SkeletonRenderer.useTriangleRendering);
+        console.log("renderer: ", skeletonRenderer.useTriangleRendering);
 
 		// Load the assets.
 		assetManager = new spine.AssetManager("assets/")
@@ -30,6 +32,7 @@
 		await assetManager.loadAll();
 
 		// Create the texture atlas and skeleton data.
+
         let atlas = assetManager.require("Crot.atlas");
 		let atlasLoader = new spine.AtlasAttachmentLoader(atlas);
 		let skeletonJson = new spine.SkeletonJson(atlasLoader);
